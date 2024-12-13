@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuga Defense Pvt Ltd</title>
-    <link rel="stylesheet" href="styles.css">
 
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -96,6 +95,19 @@
             width: 25px;
             height: 25px;
         }
+        /* Slider Styling */
+        .slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .slider .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slider .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -168,19 +180,21 @@
     <!-- Blog Section -->
     <section id="blog" class="section">
         <h2>Defence Tech Updates</h2>
-        <div class="blog">
-            <div class="card">
-                <img src="blog_1.jpg" alt="Blog 1">
-                <div class="card-content">
-                    <h3>Quantum Communication Advances</h3>
-                    <p>Exploring the latest breakthroughs in secure quantum communication for defence applications.</p>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="blog_1.jpg" alt="Blog 1">
+                    <div class="card-content">
+                        <h3>Latest Updates from IDRW</h3>
+                        <p>Placeholder for IDRW feed content.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="blog_2.jpg" alt="Blog 2">
-                <div class="card-content">
-                    <h3>AI in Modern Warfare</h3>
-                    <p>How artificial intelligence is transforming battlefield strategies and operational efficiency.</p>
+                <div class="slide">
+                    <img src="blog_2.jpg" alt="Blog 2">
+                    <div class="card-content">
+                        <h3>Latest Updates from Interesting Engineering</h3>
+                        <p>Placeholder for Interesting Engineering feed content.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,5 +233,27 @@
             <img src="social_linkedin.png" alt="LinkedIn">
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const slideCount = slides.children.length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 5000);
+
+        // Placeholder for fetching live feed every 5 hours
+        async function fetchFeeds() {
+            console.log("Fetching live feeds from IDRW and Interesting Engineering...");
+            // Implement AJAX or Fetch API for real-time content updates here
+        }
+
+        setInterval(fetchFeeds, 5 * 60 * 60 * 1000); // Every 5 hours
+    </script>
 </body>
 </html>
