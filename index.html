@@ -59,41 +59,73 @@
             font-size: 2rem;
             margin-bottom: 15px;
         }
-        .slider {
-            position: relative;
+        .products, .services, .blog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
             overflow: hidden;
-            max-width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .slide img {
+        .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-        .slide-content {
+        .card-content {
             padding: 15px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .slide-content h3 {
-            font-size: 1.5rem;
-            margin: 0 0 10px;
+        footer {
+            background-color: #4B5320;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
-        .slide-content p {
-            font-size: 1rem;
-            margin: 0 0 15px;
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
         }
-        .slide-content a {
-            color: #4B5320;
-            text-decoration: none;
+        footer .social-icons img {
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Form Styling */
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
             font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4B5320;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #3e4420;
         }
     </style>
 </head>
@@ -116,72 +148,107 @@
     <section class="hero">
         <h1>Redefining Modern Defence</h1>
     </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>Who We Are</h2>
+        <p>Yuga signifies an era within the cosmic cycle of time. In a full cosmic cycle, there are four Yugas, forming the Chatur or Maha Yuga. Our company's name reflects this timeless endurance, symbolizing strength and resilience across all eras and conditions.</p>
+        <p>Founded by a Ph.D. scholar from IIT Kharagpur, Yuga Defense leverages a strong mechanical engineering foundation and a vision to transform defense technology. Backed by IIT Kharagpur’s academic excellence and a team of experts in advanced engineering, electronics, materials science, and defence technologies, we ensure continuous innovation and cutting-edge solutions.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <h2>State-of-the-Art Products</h2>
+        <div class="products">
+            <div class="card">
+                <img src="product_1.jpg" alt="Product 1">
+                <div class="card-content">
+                    <h3>Precision Ammunition Systems</h3>
+                    <p>Engineered for reliability and performance in modern warfare.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="product_2.jpg" alt="Product 2">
+                <div class="card-content">
+                    <h3>Advanced Defense Solutions</h3>
+                    <p>Innovative technologies tailored for national security applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Empowering Defence Through Services</h2>
+        <div class="services">
+            <div class="card">
+                <div class="card-content">
+                    <h3>R&D Partnerships</h3>
+                    <p>Collaborate with us on research and development initiatives to create custom defence solutions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Engineering Consulting</h3>
+                    <p>Expert consulting in mechanical design, materials science, and electronics for defence applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Blog Section -->
     <section id="blog" class="section">
         <h2>Defence Tech Updates</h2>
-        <div class="slider">
-            <div class="slides" id="slides">
-                <!-- Slides will be dynamically injected here -->
+        <div class="blog">
+            <div class="card">
+                <img src="blog_1.jpg" alt="Blog 1">
+                <div class="card-content">
+                    <h3>Quantum Communication Advances</h3>
+                    <p>Exploring the latest breakthroughs in secure quantum communication for defence applications.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="blog_2.jpg" alt="Blog 2">
+                <div class="card-content">
+                    <h3>AI in Modern Warfare</h3>
+                    <p>How artificial intelligence is transforming battlefield strategies and operational efficiency.</p>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+        <h2>Connect with Yuga Defense</h2>
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>Copyright &copy; 2024 Yuga Defense Pvt Ltd. All Rights Reserved.</p>
+        <div class="social-icons">
+            <img src="social_facebook.png" alt="Facebook">
+            <img src="social_twitter.png" alt="Twitter">
+            <img src="social_linkedin.png" alt="LinkedIn">
+        </div>
     </footer>
-
-    <!-- Scripts -->
-    <script>
-        const sliderContainer = document.getElementById('slides');
-
-        async function fetchFeeds() {
-            const urls = [
-                'https://idrw.org/feed/',
-                'https://interestingengineering.com/category/military/feed'
-            ];
-            const feeds = await Promise.all(urls.map(url => fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`)));
-            const data = await Promise.all(feeds.map(feed => feed.json()));
-
-            let combinedArticles = [];
-
-            data.forEach(feed => {
-                combinedArticles = combinedArticles.concat(feed.items.slice(0, 5));
-            });
-
-            combinedArticles = combinedArticles.slice(0, 5); // Limit to 5 articles
-
-            sliderContainer.innerHTML = combinedArticles.map(article => `
-                <div class="slide">
-                    <img src="${article.thumbnail || 'default.jpg'}" alt="${article.title}">
-                    <div class="slide-content">
-                        <h3>${article.title}</h3>
-                        <p>${article.description.substring(0, 100)}...</p>
-                        <a href="${article.link}" target="_blank">Know More</a>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function startSlider() {
-            let currentIndex = 0;
-            const slides = document.querySelector('.slides');
-            const slideCount = slides.children.length;
-
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % slideCount;
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }, 5000);
-        }
-
-        async function initializeBlogSection() {
-            await fetchFeeds();
-            startSlider();
-        }
-
-        initializeBlogSection();
-
-        setInterval(fetchFeeds, 5 * 60 * 60 * 1000); // Refresh every 5 hours
-    </script>   
 </body>
 </html>
