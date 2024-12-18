@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuga Defense Pvt Ltd</title>
 
-    <!-- Google Font -->
+    <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Internal CSS -->
     <style>
-        /* General Body Styling */
         body {
-            font-family: 'Roboto', sans-serif; /* Font for the website */
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             background-color: #f9f9f9;
             color: #333;
         }
-
-        /* Header Styling */
         header {
             background-color: #4B5320; /* Military green */
             padding: 10px 20px;
@@ -28,134 +22,109 @@
             align-items: center;
             color: #fff;
             position: relative;
-            z-index: 10; /* Ensures header stays on top */
+            z-index: 10;
         }
-
         header img {
-            height: 60px; /* Logo size */
+            height: 60px;
         }
-
-        /* Navigation Styling */
         nav ul {
-            list-style: none; /* Removes bullets */
+            list-style: none;
             display: flex;
-            gap: 15px; /* Space between menu items */
+            gap: 15px;
             margin: 0;
             padding: 0;
         }
-
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: 500;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
-        /* Hero Section Styling (Slideshow) */
         .hero {
-            height: 400px; /* Fixed height */
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            background-color: #000;
             overflow: hidden;
             position: relative;
-            background-color: #000; /* Black background for the slideshow */
+            z-index: 1;
         }
-
-        /* Container for Slideshow Images */
         .hero-images {
             display: flex;
-            width: 100%; /* Ensures all images slide one-by-one */
-            height: 100%;
-            animation: slideImages 20s infinite; /* Smooth sliding animation */
+            animation: slideImages 20s infinite;
         }
-
         .hero-images img {
-            width: 100%; /* Each image takes full width */
+            width: 100%;
             height: 100%;
-            object-fit: cover; /* Crops and fits the images proportionally */
+            object-fit: cover;
         }
-
-        /* Slideshow Animation Keyframes */
         @keyframes slideImages {
             0% { transform: translateX(0); }
             25% { transform: translateX(-100%); }
             50% { transform: translateX(-200%); }
             75% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); 
+            100% { transform: translateX(-400%); }
         }
-
-        /* General Section Styling */
         .section {
             padding: 20px;
             margin: 20px auto;
-            max-width: 1200px; /* Centered and clean layout */
+            max-width: 1200px;
         }
-
-        /* Grid Layout for Products, Services, and Blog */
         .products, .services, .blog {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px; /* Space between cards */
+            gap: 20px;
         }
-
-        /* Card Styling */
         .card {
             border: 1px solid #ddd;
             border-radius: 5px;
-            overflow: hidden; /* Keeps content inside the border */
+            overflow: hidden;
             background: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
         .card img {
             width: 100%;
-            height: 200px; /* Fixed image height */
-            object-fit: cover; /* Ensures images are consistent */
+            height: 200px;
+            object-fit: cover;
         }
-
         .card-content {
             padding: 15px;
         }
-
-        /* Footer Styling */
         footer {
             background-color: #4B5320;
             color: #fff;
             text-align: center;
             padding: 10px 0;
         }
-
         footer .social-icons {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin: 10px 0;
         }
-
         footer .social-icons img {
             width: 25px;
             height: 25px;
         }
-
-        /* Contact Form Styling */
         form div {
             margin-bottom: 15px;
         }
-
         form label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-
         form input, form textarea {
             width: 100%;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         form button {
             padding: 10px 15px;
             border: none;
@@ -165,14 +134,13 @@
             font-weight: bold;
             cursor: pointer;
         }
-
         form button:hover {
             background-color: #3e4420;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <img src="image/12.jpg" alt="Yuga Defense Logo">
         <nav>
@@ -186,21 +154,21 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Slideshow -->
+    <!-- Hero Section with Image Slideshow -->
     <div class="hero">
         <div class="hero-images">
             <img src="image/Yuga0.jpg" alt="Image 1">
-            <img src="image/Yuga.jpg" alt="Image 2">
-            <img src="image/Yuga3.png" alt="Image 3">
-            <img src="image/Yuga4.png" alt="Image 4">
+            <img src="image/Yuga1.jpg" alt="Image 2">
+            <img src="image/Yuga2.png" alt="Image 3">
+            <img src="image/Yuga3.png" alt="Image 4">
         </div>
     </div>
 
     <!-- About Us Section -->
     <section id="about" class="section">
         <h2>Who We Are</h2>
-        <p>Yuga signifies an era within the cosmic cycle of time. In a full cosmic cycle, there are four Yugas, forming the Chatur or Maha Yuga. <br>Our company's name reflects this timeless endurance, symbolizing strength and resilience across all eras and conditions.</p>
-        <p>Founded by a Ph.D. scholar from IIT Kharagpur, Yuga Defense leverages a strong mechanical engineering foundation and a vision to transform defense technology. <br>Backed by IIT Kharagpur’s academic excellence and a team of experts in advanced engineering, electronics, materials science, and defence technologies, we ensure continuous innovation and cutting-edge solutions</p>
+        <p>Yuga signifies an era within the cosmic cycle of time. In a full cosmic cycle, there are four Yugas, forming the Chatur or Maha Yuga. Our company's name reflects this timeless endurance, symbolizing strength and resilience across all eras and conditions.</p>
+        <p>Founded by a Ph.D. scholar from IIT Kharagpur, Yuga Defense leverages a strong mechanical engineering foundation and a vision to transform defense technology. Backed by IIT Kharagpur’s academic excellence and a team of experts in advanced engineering, electronics, materials science, and defence technologies, we ensure continuous innovation and cutting-edge solutions.</p>
     </section>
 
     <!-- Products Section -->
@@ -211,14 +179,14 @@
                 <img src="product_1.jpg" alt="Product 1">
                 <div class="card-content">
                     <h3>Precision Ammunition Systems</h3>
-                    <p>Engineered for reliability and performance.</p>
+                    <p>Engineered for reliability and performance in modern warfare.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="product_2.jpg" alt="Product 2">
                 <div class="card-content">
                     <h3>Advanced Defense Solutions</h3>
-                    <p>Innovative technologies tailored for national security.</p>
+                    <p>Innovative technologies tailored for national security applications.</p>
                 </div>
             </div>
         </div>
@@ -231,13 +199,13 @@
             <div class="card">
                 <div class="card-content">
                     <h3>R&D Partnerships</h3>
-                    <p>Collaborate with us on research and development.</p>
+                    <p>Collaborate with us on research and development initiatives to create custom defence solutions.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-content">
                     <h3>Engineering Consulting</h3>
-                    <p>Expert consulting in materials and design.</p>
+                    <p>Expert consulting in mechanical design, materials science, and electronics for defence applications.</p>
                 </div>
             </div>
         </div>
@@ -251,29 +219,50 @@
                 <img src="blog_1.jpg" alt="Blog 1">
                 <div class="card-content">
                     <h3>Quantum Communication Advances</h3>
-                    <p>Exploring secure quantum communication for defence.</p>
+                    <p>Exploring the latest breakthroughs in secure quantum communication for defence applications.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="blog_2.jpg" alt="Blog 2">
+                <div class="card-content">
+                    <h3>AI in Modern Warfare</h3>
+                    <p>How artificial intelligence is transforming battlefield strategies and operational efficiency.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Us Section -->
     <section id="contact" class="section">
-        <h2>Connect with Us</h2>
+        <h2>Connect with Yuga Defense</h2>
         <form>
-            <div><label>Name:</label><input type="text" required></div>
-            <div><label>Email:</label><input type="email" required></div>
-            <div><label>Message:</label><textarea rows="5"></textarea></div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
             <button type="submit">Submit</button>
         </form>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Yuga Defense Pvt Ltd</p>
+        <p>&copy; 2024 Yuga Defense Pvt Ltd. All Rights Reserved.</p>
         <div class="social-icons">
             <img src="social_facebook.png" alt="Facebook">
             <img src="social_twitter.png" alt="Twitter">
+            <img src="social_linkedin.png" alt="LinkedIn">
         </div>
     </footer>
 </body>
