@@ -140,6 +140,28 @@
         form button:hover {
             background-color: #3e4420;
         }
+        /* Bouncing Text Styles */
+        .bouncing-text {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            font-size: 2em; /* Adjust text size */
+            font-weight: bold;
+            color: white; /* Make the text stand out */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for better visibility */
+            animation: bounce 2s infinite; /* Apply bounce animation */
+            z-index: 2; /* Ensure it stays above the images */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-20px); /* Adjust bounce height */
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,6 +188,7 @@
             <img src="image/Yuga3.jpg" alt="Image 4">
             <img src="image/Yuga6.jpg" alt="Image 5">
         </div>
+    <div class="bouncing-text"> Under Maintainance </div>
     </div>
 
     <!-- About Us Section -->
